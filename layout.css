@@ -164,10 +164,6 @@ nav.active .menu a {
   width: auto;
 }
 
-.card p {
-  text-align: bottom left;
-}
-
 .card div {
   display: grid;
   gap: 10px;
@@ -294,6 +290,15 @@ nav.active .menu a {
   border-color: var(--primary);
 }
 
+.category_headline {
+  display: grid;
+  text-align: left;
+  font-size: 2em;
+  padding: 20px;
+  color: var(--secondary);
+  margin: 20px 20px 20px 20px;
+}
+
 /* -----------------------------------------------------------------MEDIA----------------*/
 
 @media (min-width: 800px) {
@@ -325,7 +330,7 @@ nav.active .menu a {
     grid-template-rows: subgrid; /* Arver rækker fra parent grid */
     grid-row: span 2; /* Giver kortene plads */
     align-content: start; /* Undgår overlapning - align-content: start; i .card forhindrer overlapning ved at skubbe indholdet opad.*/
-    border: solid var(--secondary);
+    border: 1.5px solid var(--secondary);
     border-radius: 10px;
     padding: 15px;
   }
