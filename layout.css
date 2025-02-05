@@ -163,6 +163,7 @@ nav.active .menu a {
   height: 100%;
   width: auto;
 }
+
 .card p {
   text-align: bottom left;
 }
@@ -314,18 +315,24 @@ nav.active .menu a {
 
   .product_list_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner */
+    grid-template-rows: auto; /* Sørger for dynamisk højde - grid-template-rows: auto; i .product_list_container sikrer, at rækker får korrekt højde. */
     gap: 20px;
   }
 
-  .box {
+  .card {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-column: span 1;
-    width: 100%;
-    height: 100%;
+    grid-template-rows: subgrid; /* Arver rækker fra parent grid */
+    grid-row: span 2; /* Giver kortene plads */
+    align-content: start; /* Undgår overlapning - align-content: start; i .card forhindrer overlapning ved at skubbe indholdet opad.*/
+    border: solid var(--secondary);
+    border-radius: 10px;
+    padding: 15px;
   }
 
-  /* -----------------------------------------------------------------PRODUKT---------------*/
+  .card div {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Tilføjer specifikke rækker - grid-template-rows: auto auto auto; i .card div sikrer, at tekst og priser har deres egne rækker.*/
+    gap: 10px;
+  }
 }
