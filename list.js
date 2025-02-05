@@ -31,7 +31,8 @@ function showProducts(products) {
   <div class="card">
     <img src="https://kea-alt-del.dk/t7/images/webp/640/${element.id}.webp" alt="${element.productdisplayname}" />
     <div>
-      <h2>${element.productdisplayname}</h2>
+      <h1> ${element.productdisplayname}</h1>
+      <h2>${element.brandname}</h2>
 
       <!-- Viser om produktet er udsolgt eller har rabat som små badges -->
       ${element.soldout ? `<span class="sold_out">Sold Out</span>` : ""}
@@ -39,7 +40,7 @@ function showProducts(products) {
 
       <h3>${element.soldout ? "Sold Out" : element.price + " DKK"}</h3>
 
-      ${element.discount ? `<h3>NEW PRICE ${Math.floor((element.price / 100) * (100 - element.discount))} DKK</h3>` : ""}
+      ${element.discount ? `<h3 class="new_price">NEW PRICE ${Math.floor((element.price / 100) * (100 - element.discount))} DKK</h3>` : ""}
       
       <p>${element.articletype}</p>
     </div>

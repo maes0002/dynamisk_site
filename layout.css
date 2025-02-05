@@ -218,6 +218,7 @@ nav.active .menu a {
 .product_container {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 30px;
 }
 
 .information_container {
@@ -261,6 +262,37 @@ nav.active .menu a {
   padding: 30px 20px 30px 20px;
 }
 
+.size-selector {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 300px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.size-selector button {
+  background-color: #ddd;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-selector button:hover {
+  background-color: #ccc;
+}
+
+.size-selector button.active {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
 /* -----------------------------------------------------------------MEDIA----------------*/
 
 @media (min-width: 800px) {
@@ -282,7 +314,7 @@ nav.active .menu a {
 
   .product_list_container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto;
     gap: 20px;
   }

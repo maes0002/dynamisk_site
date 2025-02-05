@@ -25,16 +25,30 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             <h2>${data.price} DKK</h2>
             
             <!-- Hvis der er rabat, vis den nye pris -->
-            ${data.discount ? `<h3 class="discount">Tilbud: ${Math.floor((data.price / 100) * (100 - data.discount))} DKK</h3>` : ""}
+            ${data.discount ? `<h2 class="discount">Tilbud: ${Math.floor((data.price / 100) * (100 - data.discount))} DKK</h2>` : ""}
 
             <!-- hvis produktet er udsolgt, vis dette -->
             ${data.soldout ? `<h2 class="sold_out">SOLD OUT</h2>` : ""}
             
+    <div class="size-selector">
+              <button data-size="36">36</button>
+              <button data-size="37">37</button>
+              <button data-size="38">38</button>
+              <button data-size="39">39</button>
+              <button data-size="40">40</button>
+              <button data-size="41">41</button>
+              <button data-size="42">42</button>
+              <button data-size="43">43</button>
+              <button data-size="44">44</button>
+            </div>
+
             <!-- Knappen til at tilføje produktet til kurven -->
             <div class="cta">
                 <a class="cta" href="#">ADD TO BASKET</a>
             </div>
           
+            
+
             <!-- Viser yderligere produktinformation -->
             <div class="product_info">
                 <p><strong>PRODUCT INFORMATION:</strong></p>
