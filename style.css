@@ -1,0 +1,107 @@
+/*************** Reset *********************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}
+
+/* ----------------------------------------------------- VARIABLE --------------*/
+:root {
+  /* Primære farve til hele sitet */
+  --primary: #d9d9d9;
+
+  /* Sekundære farve til hele sitet */
+  --secondary: #000000;
+
+  /* Kontrast/tertiær farve til hele sitet */
+  --contrast: #ffffff;
+
+  /* Primær font */
+  --main_font: "Bebas Neue", sans-serif;
+
+  /* Brødtekst font */
+  --txt_font: "Albert Sans", sans-serif;
+
+  /* Brødtekst farve  */
+  --txt_color: #000000;
+}
+/* -----------------------------------------------------Fra google --------------*/
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* -----------------------------------------------------TEKST--------------*/
+h1 {
+  font-family: var(--main_font);
+  color: var(--secondary);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: var(--main_font);
+  color: var(--secondary);
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: var(--txt_font);
+  color: var(--txt_color);
+}
+
+p {
+  font-family: var(--txt_font);
+  color: var(--txt_color);
+  line-height: 1.5rem;
+  font-size: 0.8em;
+}
+
+a {
+  font-family: var(--main_font);
+  text-decoration: none;
+  color: var(--txt_color);
+  font-weight: 600;
+}
+
+li {
+  font-family: var(--txt_font);
+  color: var(--txt_color);
+  margin-block: 0.8rem;
+}
+
+/*-------------------------------------------------------------------------BAGGRUNDSFARVER ----------*/
+.bg_color1 {
+  background-color: var(--primary);
+}
+
+.bg_color2 {
+  background-color: var(--secondary);
+}
+
+.bg_color3 {
+  background-color: var(--contrast);
+}
+
+/*-------------------------------------------------------------------------IMG ----------*/
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* ----------------------------------------------------------------MAIN-----------------------------*/
+
+body {
+  background-color: var(--primary);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
